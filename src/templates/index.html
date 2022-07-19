@@ -1,0 +1,71 @@
+{% extends "base.html" %}
+ 
+{% block title %}Add New Students{% endblock title %}
+ 
+{% block content %}
+<div class="col-md-12">
+    <h4>Student Registration Portal</h4> 
+         
+ <form method="POST" class="post-form" action="/addnew">  
+   {% csrf_token %}  
+  <div class="container">  
+ <br>  
+<div class="form-group row">  
+<label class="col-sm-1 col-form-label"></label>  
+<div class="col-sm-4">  
+<h3>Student Registration Details</h3>  
+</div>  
+</div>  
+   
+<div class="form-group row">  
+<label class="col-sm-2 col-form-label">Student Name:</label>  
+<div class="col-sm-4">  
+    {{ form.student_name }}  
+</div>  
+</div>
+
+ <div class="form-group row">  
+ <label class="col-sm-2 col-form-label">Student DOB:</label>  
+ <div class="col-sm-4">  
+    {{ form.student_dob }}  
+ </div>  
+ </div>
+
+ <div class="form-group row">  
+ <label class="col-sm-2 col-form-label">Student Gender:</label>  
+ <div class="col-sm-4">  
+    {{ form.student_gender }}  
+ </div>  
+ </div>
+
+<div class="form-group row">  
+<label class="col-sm-2 col-form-label">Student Address:</label>  
+<div class="col-sm-4">  
+{{ form.student_address }}  
+</div>  
+</div>         
+
+<div class="form-group row">  
+<label class="col-sm-2 col-form-label">Student Email:</label>  
+<div class="col-sm-4">  
+{{ form.student_email }}  
+</div>  
+</div>  
+
+<div class="form-group row">  
+<label class="col-sm-2 col-form-label">Student Phone:</label>  
+<div class="col-sm-4">  
+{{ form.student_phone }}  
+</div>  
+</div>  
+
+<div class="form-group row">  
+<label class="col-sm-1 col-form-label"></label>  
+<div class="col-sm-4">  
+<button type="submit" class="btn btn-primary">Submit</button>  
+</div>  
+</div>  
+</div>  
+</form>  
+</div> 
+{% endblock content %} 
